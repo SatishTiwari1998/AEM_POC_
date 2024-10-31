@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Properties"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[core.cif.components.featuredcategorylist.v1.editor,cif.shell.picker]">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/tabs"
+        size="L">
+        <items jcr:primaryType="nt:unstructured">
+            <tabBanner1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Footer Texts"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                        
+                            <socialCopyText
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Social Copy-text"
+                            name="./socialCopyText"/>
+
+                            <brandName
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Brand Name"
+                            name="./brandName"/>
+
+                            <brandCopy
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Footer Copy"
+                            name="./brandCopy"/>
+
+                            <footerCol1Title
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Footer Col-1 Title"
+                            name="./footerCol1Title"/>
+
+                            <footerCol2Title
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Footer Col-2 Title"
+                            name="./footerCol2Title"/>
+
+                            <footerCol3Title
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Footer Col-3 Title"
+                            name="./footerCol3Title"/>
+                        </items>
+                    </column>
+                </items>
+            </tabBanner1>
+            <tabBanner2
+            jcr:primaryType="nt:unstructured"
+            jcr:title="MultiFields"
+            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+            <items jcr:primaryType="nt:unstructured">
+                <column
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                    <items jcr:primaryType="nt:unstructured">
+                        <!-- Composite Multifield for Nav Items -->
+                        <socialMediaIcons
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                fieldDescription="Click 'Add Field' to add a new social media icon."
+                                fieldLabel="Social Media Icons"
+                                composite="{Boolean}true">
+                                <field
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                        name="./socialMediaIcons">
+                                        <items jcr:primaryType="nt:unstructured">
+                                                <column
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Social Media Icon"
+                                                        sling:resourceType="granite/ui/components/foundation/layouts/collapsible">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <iconImage jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                            allowUpload="{Boolean}false"
+                                                            autoStart="{Boolean}false"
+                                                            class="cq-droptarget"
+                                                            fieldLabel="Icon Image"
+                                                            fieldDescription="Same Image Refernce Field is used for Home Page Banner"
+                                                            fileNameParameter="fileName"
+                                                            fileReferenceParameter="./iconImage"
+                                                            mimeTypes="[image/jpeg,image/png,image/svg]"
+                                                            multiple="{Boolean}false"
+                                                            name="images"
+                                                            title="Header Logo"
+                                                            uploadUrl="${suffix.path}"
+                                                            useHTML5="{Boolean}true"/>
+
+                                                            <iconLink jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                            fieldLabel="Brand Link"
+                                                            name="./iconLink"
+                                                            root="/content"
+                                                            validation="[foundation.validation.url]" />
+                                                        </items>
+                                                </column>
+                                        </items>
+                                </field>
+                        </socialMediaIcons>
+
+                        <textLink1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                fieldDescription="Click 'Add Field' to add a new text Link."
+                                fieldLabel="Footer column-1 items"
+                                composite="{Boolean}true">
+                                <field
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                        name="./textLink1">
+                                        <items jcr:primaryType="nt:unstructured">
+                                                <column
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Text Link"
+                                                        sling:resourceType="granite/ui/components/foundation/layouts/collapsible">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <text1
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldLabel="Text"
+                                                            name="./text1"/>
+                                                            <link1 jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                            fieldLabel="Link"
+                                                            name="./link1"
+                                                            root="/content"
+                                                            validation="[foundation.validation.url]" />
+                                                        </items>
+                                                </column>
+                                        </items>
+                                </field>
+                        </textLink1>
+
+                        <textLink2
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                fieldDescription="Click 'Add Field' to add a new text Link."
+                                fieldLabel="Footer column-2 items"
+                                composite="{Boolean}true">
+                                <field
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                        name="./textLink2">
+                                        <items jcr:primaryType="nt:unstructured">
+                                                <column
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Text Link"
+                                                        sling:resourceType="granite/ui/components/foundation/layouts/collapsible">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <text2
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldLabel="Text"
+                                                            name="./text2"/>
+                                                            <link2 jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                            fieldLabel="Link"
+                                                            name="./link2"
+                                                            root="/content"
+                                                            validation="[foundation.validation.url]" />
+                                                        </items>
+                                                </column>
+                                        </items>
+                                </field>
+                        </textLink2>
+
+                        <textImage
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                fieldDescription="Click 'Add Field' to add a new text-image."
+                                fieldLabel="Footer column-3 items"
+                                composite="{Boolean}true">
+                                <field
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                        name="./textImage">
+                                        <items jcr:primaryType="nt:unstructured">
+                                                <column
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Text Link"
+                                                        sling:resourceType="granite/ui/components/foundation/layouts/collapsible">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <contactText
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldLabel="Text"
+                                                            name="./contactText"/>
+
+                                                            <contactIcon jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                            allowUpload="{Boolean}false"
+                                                            autoStart="{Boolean}false"
+                                                            class="cq-droptarget"
+                                                            fieldLabel="Icon Image"
+                                                            fieldDescription="Same Image Refernce Field is used for Home Page Banner"
+                                                            fileNameParameter="fileName"
+                                                            fileReferenceParameter="./contactIcon"
+                                                            mimeTypes="[image/jpeg,image/png,image/svg]"
+                                                            multiple="{Boolean}false"
+                                                            name="images"
+                                                            title="Contact Icon"
+                                                            uploadUrl="${suffix.path}"
+                                                            useHTML5="{Boolean}true"/>
+                                                        </items>
+                                                </column>
+                                        </items>
+                                </field>
+                        </textImage>
+                    </items>
+                </column>
+            </items>
+        </tabBanner2>
+        </items>
+    </content>
+</jcr:root>

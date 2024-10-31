@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/aempoc" mode="merge"/>
+    <filter root="/content/aempoc" mode="merge"/>
+    <filter root="/content/dam/aempoc" mode="merge">
+        <exclude pattern="/content/dam/aempoc(/.*)?"/>
+        <include pattern="/content/dam/aempoc/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/aempoc/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/aempoc" mode="merge"/>
+</workspaceFilter>

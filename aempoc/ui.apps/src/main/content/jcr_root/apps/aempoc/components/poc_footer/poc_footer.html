@@ -1,0 +1,45 @@
+<div data.emptyText="Header Component" class="cq-placeholder"></div>
+<sly data-sly-use.model="com.aempoc.core.models.PocFooter">
+  <div class="poc_footer">
+    <footer class="text-center text-lg-start bg-body-dark bg-dark text-muted">
+      <section class="d-flex justify-content-center justify-content-between p-4 border-bottom footer-top">
+        <div class="me-5 d-none d-lg-block connect-with-us">
+          <span class="social-copy-text">${model.socialCopyText}</span>
+        </div>
+        <div class="d-flex justify-content-between align-items-center social-media-icons">
+          <sly data-sly-list.icon="${model.socialMediaIcons}">
+            <a href="${icon.iconLink}" class="me-4 text-reset"><img src="${icon.iconImage}" alt="" width="20"
+                height="20"></a>
+          </sly>
+        </div>
+      </section>
+      <section class="footer-bottom">
+        <div class="container text-center text-md-start mt-5">
+          <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4 brand-name">${model.brandName}</h6>
+              <p class="brand-copy">${model.brandCopy}</p>
+            </div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 footer-col-1">
+              <h6 class="text-uppercase fw-bold mb-4">${model.footerCol1Title}</h6>
+              <sly data-sly-list.textLink1="${model.textLink1}">
+                <p><a href="${textLink1.link1}" class="text-reset">${textLink1.text1}</a></p>
+              </sly>
+            </div>
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 footer-col-2">
+              <h6 class="text-uppercase fw-bold mb-4">${model.footerCol2Title}</h6>
+              <sly data-sly-list.textLink2="${model.textLink2}">
+                <p><a href="${textLink2.link2}" class="text-reset">${textLink2.text2}</a></p>
+              </sly>
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 footer-col-3">
+              <h6 class="text-uppercase fw-bold mb-4">${model.footerCol3Title}</h6>
+              <sly data-sly-list.textImage="${model.textImage}">
+                <p d-flex justify-content-center align-items-center><img src="${textImage.contactIcon}" alt="" class="icon" width="20" height="20">${textImage.contactText}</p>
+              </sly>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+  </div>

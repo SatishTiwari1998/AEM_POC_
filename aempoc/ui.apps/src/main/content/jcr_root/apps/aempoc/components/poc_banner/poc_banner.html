@@ -1,0 +1,17 @@
+<div data.emptyText="Header Component" class="cq-placeholder"></div>
+<sly data-sly-use.model="com.aempoc.core.models.PocBanner">
+<div class="poc-banner container-fluid">
+    <div class="banner-wrapper">
+        <div class="banner-container d-flex ">
+                <div class="right">
+                    <sly data-sly-list.bannerText="${model.bannerText}">
+                    <p data-sly-attribute.class="${bannerText.authorableClasses}">${bannerText.bannerItemtext}</p>
+                    </sly>
+                </div>
+                <div class="left">
+                    <img src="${model.bannerImage}" alt="banner-image">
+                </div>
+        </div>
+    </div>
+</div>
+

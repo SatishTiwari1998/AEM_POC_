@@ -1,0 +1,23 @@
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+  
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+  
+    button {
+      display: inline-block;
+    }
+  
+    .modal-content {
+      text-align: left;
+      padding: 1.5rem;
+    }
+  
+    .modal-body p {
+      margin-bottom: 1rem;
+    }
+  }
+  

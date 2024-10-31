@@ -1,0 +1,39 @@
+<div data.emptyText="Header Component" class="cq-placeholder"></div>
+<sly data-sly-use.model="com.aempoc.core.models.PocHeader">
+<div class="poc_header">
+    <div class="poc_header_desktop">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="brand-logo-container d-flex align-items-center justify-content-center">
+                <a href="#" class="brand-logo">
+                    <img src="${model.headerLogoImage}" alt="brand-logo" width="20" height="20">
+                </a>
+                <a class="navbar-brand brand-name" href="${model.brandLink}">${model.brandName}</a>
+            </div>
+            <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                  <sly data-sly-list.navItem="${model.navItems}">
+                    <li class="nav-item">
+                        <a class="nav-link" href="${navItem.navItemLink}">${navItem.navItemText}</a>
+                    </li>
+                </sly>
+              </ul>
+              <div class="author-profile d-flex justify-content-center align-items-center">
+                <div class="profile-name d-flex justify-content-center align-items-center">
+                  <span class="name">Name</span>
+                  <span class="unique-id">ABC123</span>
+                </div>
+                <div class="profile-image">
+                  <img src="" alt="">
+                </div>
+              </div>
+              <!-- <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form> -->
+            </div>
+          </nav>
+    </div>
+</div>

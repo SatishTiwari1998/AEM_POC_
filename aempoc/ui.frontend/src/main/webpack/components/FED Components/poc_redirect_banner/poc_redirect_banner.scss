@@ -1,0 +1,38 @@
+.poc-banner-redirect{
+    .banner-wrapper{
+        padding: 100px 40px;
+        .banner-container{
+            p{
+                color: white;
+                margin-bottom: 0px;
+                line-height: 120%;
+            }
+            .copy-1{
+                font-size: 65px;
+            }
+            .copy-2{
+                font-size: 38px;
+                margin-top: 30px;
+            }
+            .copy-3{
+                font-size: 24px;
+                margin-top: 30px;
+            }
+            .redirect-btn{
+                display: block;
+                margin-top: 30px;
+                button{
+                    margin-top: 10px;
+                    background-color: yellow;
+                    color: black;
+                    border: none;
+                    text-transform: uppercase;
+                    &:hover {
+                      background-color: #ffcc00;
+                    }
+                }
+
+            }
+        }
+    }
+}

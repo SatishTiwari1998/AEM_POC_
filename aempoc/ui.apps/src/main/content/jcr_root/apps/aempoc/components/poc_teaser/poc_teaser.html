@@ -1,0 +1,19 @@
+<div class="container-fluid teaser">
+  <img src="${properties.backGroundImage @ context='uri'}" class="teaser-background" alt="Teaser Background">
+  <div class="overlay"></div>
+  <div class="row align-items-center teaser-content">
+    <div class="col-md-6 description">
+      <h3>${properties.teaserTitle}</h3>
+      <p>${properties.teaserDescription}</p>
+    </div>
+    <div class="col-md-1 text-center">
+      <div class="separator"></div>
+    </div>
+    <div class="col-md-5 category-section text-right">
+      <h4 class="category-name">${properties.teaserCategory}</h4>
+      <a href="${properties.teaserLink}" class="teaser-button">
+        <button class="btn btn-primary explore-btn">${properties.teaserBtn}</button>
+      </a>
+    </div>
+  </div>
+</div>
