@@ -1,3 +1,10 @@
+document.addEventListener('DOMContentLoaded', () => {
+  // Check if we are on the home page with ID 'poc-home'
+  if (document.getElementById('poc-home')) {
+      displayRandomBlogs(blogPosts);
+  }
+});
+
 let blogPosts = [
   {
     "id": "blog_001",
@@ -141,38 +148,24 @@ let blogPosts = [
   }
 ];
 
-
-
 function displayRandomBlogs(posts, count = 6) {
-    // Shuffle the posts array
-    const shuffledPosts = posts.sort(() => 0.5 - Math.random());
-    
-    // Get the container to append blog cards
-    const container = document.querySelector('.home-page-featured #dynamic-blogs-container');
+  // Shuffle the posts array
+  const shuffledPosts = posts.sort(() => 0.5 - Math.random());
+  
+  // Get the container to append blog cards
+  const container = document.querySelector('.home-page-featured #dynamic-blogs-container');
 
-    // Select the first 'count' posts and render them
-    shuffledPosts.slice(0, count).forEach(post => {
-        const blogCard = `
-        <div class="col-md-6 mb-4">
-            <div class="card h-100">
-                <img src="${post.blogThumbnail}" class="card-img-top img-fluid" alt="${post.title}">
-                <div class="card-body">
-                    <p class="badge badge-primary">${post.type}</p>
-                    <h5 class="card-title">${post.title}</h5>
-                    <p class="card-text">${post.description}</p>
-                    <p class="card-author"><strong>By:</strong> ${post.author.name}</p>
-                    <a href="#" class="btn btn-outline-primary">Read More</a>
-                </div>
-            </div>
+  // Select the first 'count' posts and render them
+  shuffledPosts.slice(0, count).forEach(post => {
+      const blogCard = `
+      <li class='item' style="background-image: url('${post.blogThumbnail}')">
+        <div class='content'>
+          <h2 class='title'>${post.title}</h2>
+          <p class='description'>${post.description}</p>
+          <a href="#" class="btn read-more">Read More</a>
         </div>
-        `;
-        container.insertAdjacentHTML('beforeend', blogCard);
-    });
+      </li>
+      `;
+      container.insertAdjacentHTML('beforeend', blogCard);
+  });
 }
-
-// Call the function to display 10 random blog posts
-document.addEventListener('DOMContentLoaded', () => {
-    displayRandomBlogs(blogPosts);
-});
-
-

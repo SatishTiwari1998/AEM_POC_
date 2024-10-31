@@ -37,8 +37,7 @@
                             <teaserLink jcr:primaryType="nt:unstructured"
                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                             fieldLabel="Teaser Link"
-                            name="./teaserLink "
-                            validation="[foundation.validation.url]" />
+                            name="./teaserLink"/>
 
                             <teaserTitle
                             jcr:primaryType="nt:unstructured"
