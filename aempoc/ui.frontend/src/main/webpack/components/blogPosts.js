@@ -1,4 +1,4 @@
-let blogPost= [
+export const blogPosts = [
     {
       "id": "blog_001",
       "type": "Tech",
@@ -6,9 +6,9 @@ let blogPost= [
       "author": {
         "id": "ABC123",
         "name": "John Doe",
-        "profileImage": "https://example.com/profile-image1.jpg"
+        "profileImage": "https://picsum.photos/100/100?random=1"  // hosted image URL
       },
-      "blogThumbnail": "https://example.com/blog-thumbnail1.jpg",
+      "blogThumbnail": "https://picsum.photos/400/200?random=1",  // hosted image URL
       "description": "Exploring how AI is reshaping the future of technology and what lies ahead.",
       "title": "AI in the Future",
       "tags": ["AI", "Machine Learning", "Tech"]
@@ -20,9 +20,9 @@ let blogPost= [
       "author": {
         "id": "DEF456",
         "name": "Jane Smith",
-        "profileImage": "https://example.com/profile-image2.jpg"
+        "profileImage": "https://picsum.photos/100/100?random=2"  // hosted image URL
       },
-      "blogThumbnail": "https://example.com/blog-thumbnail2.jpg",
+      "blogThumbnail": "https://picsum.photos/400/200?random=2",  // hosted image URL
       "description": "A journey into the evolving world of culinary art and its cultural significance.",
       "title": "The Art of Modern Cooking",
       "tags": ["Food", "Culinary", "Culture"]
@@ -34,9 +34,9 @@ let blogPost= [
       "author": {
         "id": "GHI789",
         "name": "Michael Brown",
-        "profileImage": "https://example.com/profile-image3.jpg"
+        "profileImage": "https://picsum.photos/100/100?random=3"  // hosted image URL
       },
-      "blogThumbnail": "https://example.com/blog-thumbnail3.jpg",
+      "blogThumbnail": "https://picsum.photos/400/200?random=3",  // hosted image URL
       "description": "How blockchain is revolutionizing the financial industry and global markets.",
       "title": "Blockchain and Finance",
       "tags": ["Finance", "Blockchain", "Tech"]
@@ -48,9 +48,9 @@ let blogPost= [
       "author": {
         "id": "JKL012",
         "name": "Emily White",
-        "profileImage": "https://example.com/profile-image4.jpg"
+        "profileImage": "https://picsum.photos/100/100?random=4"  // hosted image URL
       },
-      "blogThumbnail": "https://example.com/blog-thumbnail4.jpg",
+      "blogThumbnail": "https://picsum.photos/400/200?random=4",  // hosted image URL
       "description": "Exploring the hidden gems of Southeast Asia and their breathtaking landscapes.",
       "title": "Unveiling Southeast Asia",
       "tags": ["Travel", "Adventure", "Asia"]
@@ -62,9 +62,9 @@ let blogPost= [
       "author": {
         "id": "MNO345",
         "name": "Sarah Green",
-        "profileImage": "https://example.com/profile-image5.jpg"
+        "profileImage": "https://picsum.photos/100/100?random=5"  // hosted image URL
       },
-      "blogThumbnail": "https://example.com/blog-thumbnail5.jpg",
+      "blogThumbnail": "https://picsum.photos/400/200?random=5",  // hosted image URL
       "description": "The latest trends in software development and their impact on businesses.",
       "title": "Trends in Software Development",
       "tags": ["Tech", "Software", "Development"]
@@ -76,9 +76,9 @@ let blogPost= [
       "author": {
         "id": "ABC123",
         "name": "John Doe",
-        "profileImage": "https://example.com/profile-image1.jpg"
+        "profileImage": "https://picsum.photos/100/100?random=6"  // hosted image URL
       },
-      "blogThumbnail": "https://example.com/blog-thumbnail6.jpg",
+      "blogThumbnail": "https://picsum.photos/400/200?random=6",  // hosted image URL
       "description": "A guide to personal finance and investment strategies for the modern era.",
       "title": "Mastering Personal Finance",
       "tags": ["Finance", "Investments", "Wealth"]
@@ -90,9 +90,9 @@ let blogPost= [
       "author": {
         "id": "DEF456",
         "name": "Jane Smith",
-        "profileImage": "https://example.com/profile-image2.jpg"
+        "profileImage": "https://picsum.photos/100/100?random=7"  // hosted image URL
       },
-      "blogThumbnail": "https://example.com/blog-thumbnail7.jpg",
+      "blogThumbnail": "https://picsum.photos/400/200?random=7",  // hosted image URL
       "description": "Travel tips for backpackers exploring the beauty of New Zealand.",
       "title": "Backpacking in New Zealand",
       "tags": ["Travel", "New Zealand", "Adventure"]
@@ -104,9 +104,9 @@ let blogPost= [
       "author": {
         "id": "GHI789",
         "name": "Michael Brown",
-        "profileImage": "https://example.com/profile-image3.jpg"
+        "profileImage": "https://picsum.photos/100/100?random=8"  // hosted image URL
       },
-      "blogThumbnail": "https://example.com/blog-thumbnail8.jpg",
+      "blogThumbnail": "https://picsum.photos/400/200?random=8",  // hosted image URL
       "description": "A deep dive into sustainable food practices and their impact on health.",
       "title": "Sustainable Food Practices",
       "tags": ["Food", "Sustainability", "Health"]
@@ -118,9 +118,9 @@ let blogPost= [
       "author": {
         "id": "JKL012",
         "name": "Emily White",
-        "profileImage": "https://example.com/profile-image4.jpg"
+        "profileImage": "https://picsum.photos/100/100?random=9"  // hosted image URL
       },
-      "blogThumbnail": "https://example.com/blog-thumbnail9.jpg",
+      "blogThumbnail": "https://picsum.photos/400/200?random=9",  // hosted image URL
       "description": "Exploring quantum computing and its potential to transform industries.",
       "title": "Quantum Computing Revolution",
       "tags": ["Tech", "Quantum", "Future"]
@@ -132,12 +132,11 @@ let blogPost= [
       "author": {
         "id": "MNO345",
         "name": "Sarah Green",
-        "profileImage": "https://example.com/profile-image5.jpg"
+        "profileImage": "https://picsum.photos/100/100?random=10"  // hosted image URL
       },
-      "blogThumbnail": "https://example.com/blog-thumbnail10.jpg",
+      "blogThumbnail": "https://picsum.photos/400/200?random=10",  // hosted image URL
       "description": "How AI is impacting financial services and reshaping business models.",
       "title": "AI in Financial Services",
       "tags": ["Finance", "AI", "Tech"]
     }
-  ]
-  
+  ];
