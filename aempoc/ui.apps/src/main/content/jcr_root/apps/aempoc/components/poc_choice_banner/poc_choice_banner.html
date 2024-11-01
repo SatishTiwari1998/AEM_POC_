@@ -1,0 +1,32 @@
+<div data.emptyText="Header Component" class="cq-placeholder"></div>
+<sly data-sly-use.model="com.aempoc.core.models.PocChoiceBanner">
+<div class="poc-choice-banner container-fluid">
+    <div class="banner-wrapper">
+        <div class="banner-container">
+            <div class="banner-title">
+                <h2>${model.choiceBannerTitle}</h2>
+            </div>
+            <div class="banner-content d-flex justify-content-center align-items-center">
+                <div class="banner-left">
+                        <div class="category-tiles">
+                            <sly data-sly-list.item="${model.choiceBannerTextImage}">
+                                <div class="tile">
+                                    <div class="icon-box">
+                                        <img src="${item.categoryIcon}" alt="Category Icon">
+                                    </div>
+                                    <h2 class="category-name">${item.categoryText}</h2>
+                                </div>
+                            </sly>
+                        </div>
+                </div>
+                <div class="banner-right">
+                    <div class="selected-info">
+                        <h2 class="category-title"></h2>
+                        <p class="description"></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
