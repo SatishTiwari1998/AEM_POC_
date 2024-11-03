@@ -39,8 +39,7 @@
                             <bannerLink jcr:primaryType="nt:unstructured"
                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                             fieldLabel="Banner Link"
-                            name="./bannerLink"
-                            validation="[foundation.validation.url]" />
+                            name="./bannerLink"/>
                             
                         </items>
                     </column>
