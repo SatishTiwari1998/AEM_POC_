@@ -22,10 +22,10 @@ import java.io.IOException;
 import static org.apache.sling.api.servlets.ServletResolverConstants.SLING_SERVLET_PATHS;
 
 @Component(service = Servlet.class,
- property = {
-    "sling.servlet.methods=" + HttpConstants.METHOD_POST,
-    "sling.servlet.paths=" + "/bin/blogposts/post"
-})
+    property = {
+        "sling.servlet.methods=" + HttpConstants.METHOD_POST,
+        "sling.servlet.paths=" + "/bin/blogposts/post"
+    })
 @ServiceDescription("Blog Post Submission Servlet")
 @ServiceVendor("Example")
 public class BlogPostServlet extends SlingAllMethodsServlet {
@@ -53,7 +53,8 @@ public class BlogPostServlet extends SlingAllMethodsServlet {
                     jsonData.append(line);
                 }
             }
-            
+            log.info("Received JSON data: {}", jsonData.toString());
+
             JSONObject jsonRequest = new JSONObject(jsonData.toString());
             String category = jsonRequest.optString("category");
             String title = jsonRequest.optString("blogTitle");
@@ -61,30 +62,35 @@ public class BlogPostServlet extends SlingAllMethodsServlet {
             String tags = jsonRequest.optString("tags");
             String author = jsonRequest.optString("authorName");
 
-            log.info("Received data - category: {}, title: {}", category, title);
+            log.info("Parsed data - Category: {}, Title: {}, Author: {}", category, title, author);
 
             Node rootNode;
             if (!session.nodeExists("/content/blogposts")) {
                 rootNode = session.getRootNode().addNode("content").addNode("blogposts", "nt:unstructured");
+                log.info("Created new root node at /content/blogposts");
             } else {
                 rootNode = session.getNode("/content/blogposts");
+                log.info("Retrieved existing root node at /content/blogposts");
             }
 
+            // Create a new blog post node
             Node postNode = rootNode.addNode("post_" + System.currentTimeMillis(), "nt:unstructured");
             postNode.setProperty("category", category);
             postNode.setProperty("title", title);
             postNode.setProperty("description", description);
             postNode.setProperty("tags", tags);
             postNode.setProperty("authorName", author);
+            log.info("Set properties for new post node");
 
             session.save();
+            log.info("Session saved successfully, blog post created");
 
             response.setContentType("application/json");
             JSONObject jsonResponse = new JSONObject();
             jsonResponse.put("status", "success");
             jsonResponse.put("message", "Blog post created successfully.");
             response.getWriter().write(jsonResponse.toString());
-            log.info("Blog post created successfully");
+            log.info("Response sent: Blog post created successfully");
 
         } catch (RepositoryException e) {
             log.error("RepositoryException while creating blog post", e);
@@ -93,6 +99,7 @@ public class BlogPostServlet extends SlingAllMethodsServlet {
         } finally {
             if (session != null) {
                 session.logout();
+                log.info("Session logged out");
             }
         }
     }
