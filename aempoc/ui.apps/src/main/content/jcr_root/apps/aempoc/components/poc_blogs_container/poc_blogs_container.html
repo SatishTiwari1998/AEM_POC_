@@ -1,6 +1,16 @@
 <div class="container-fluid blogs-container ${properties.containerClass}">
     <h2 class="container-title text-center">${properties.containerTitle}</h2>
-    <div id="dynamic-blogs-container" class="row">
-        <!-- Dynamic blog content goes here -->
+    <div class="slider-wrapper">
+        <main>
+            <ul class='slider' id="dynamic-blogs-container">
+                <!-- Dynamic Content Here -->
+            </ul>
+            <nav class='nav'>
+              <ion-icon class='btn prev' name="arrow-back-outline"></ion-icon>
+              <ion-icon class='btn next' name="arrow-forward-outline"></ion-icon>
+            </nav>
+          </main>
     </div>
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
+      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
 </div>
